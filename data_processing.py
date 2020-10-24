@@ -25,6 +25,7 @@ def get_video_indices(filename):
     random.shuffle(video_indices)
     validation_video_indices = video_indices[:int(len(video_indices) * 0.2)]
     train_video_indices = video_indices[int(len(video_indices) * 0.2):]
+    print("获取train、validation数据集")
     return train_video_indices, validation_video_indices
 
 def frame_process(clip, clip_length=CLIP_LENGTH, crop_size=112, channel_num=3):

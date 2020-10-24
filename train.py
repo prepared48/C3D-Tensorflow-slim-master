@@ -24,6 +24,7 @@ LR_DECAY_FACTOR = 0.5
 EPOCHS_PER_LR_DECAY = 2
 MOVING_AV_DECAY = 0.9999
 #Get shuffle index
+print("开始处理数据")
 train_video_indices, validation_video_indices = data_processing.get_video_indices(TRAIN_LIST_PATH)
 
 with tf.Graph().as_default():
