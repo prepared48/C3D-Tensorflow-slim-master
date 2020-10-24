@@ -86,7 +86,7 @@ def get_batches(filename, num_classes, batch_index, video_indices, batch_size=10
         line = lines[i].strip('\n').split()
         dirname = line[0]
         label = line[1]
-        dirname=os.path.join('D:\代码',dirname)
+        dirname=os.path.join('/mnt',dirname)
         i_clip = convert_images_to_clip(dirname, CLIP_LENGTH, crop_size, channel_num)
         clips.append(i_clip)
         labels.append(int(label))
